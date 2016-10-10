@@ -57,7 +57,14 @@ routerApp.controller('homeController', function($scope,$http) {
 				console.log($scope.teamsMenu);
 		});
 
-$scope.hola="helous";
+	var URL_LEAGUETABLE="http://api.football-data.org/v1/competitions/436/leagueTable";	
+			$http.get(URL_LEAGUETABLE).
+			then(function(response){		
+				$scope.leagueTable=response.data.standing;
+				console.log($scope.leagueTable);
+		});	
+
+
     
 });
 routerApp.controller('homeListController', function($scope) {

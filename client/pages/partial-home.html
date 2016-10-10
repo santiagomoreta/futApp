@@ -1,8 +1,26 @@
   <nav class="navbar navbar-inverse" role="navigation">
   	<ul class="nav navbar-nav" ng-repeat="team in teamsMenu">
-	<li><a title="team.code" href="" class="{{team.code}}">{{team.shortName}}</a></li>
+	<li><a title="team.code" href=""  class="teamsShield" id="{{team.shortName}}">{{team.shortName}}</a></li>
 	</ul>
   </nav>
+  <div>
+    <table class="table">
+    <thead>
+      <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="team in leagueTable">
+        <td>{{team.position}}</td>
+        <td>{{team.teamName}}</td>
+        <td>{{team.points}}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
 <div class="jumbotron text-center">
     <h1>The Homey Page</h1>
     <p>This page demonstrates <span class="text-danger">nested</span> views.</p>
