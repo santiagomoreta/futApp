@@ -1,30 +1,51 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html ng-app='angularRoutingApp'>
+<html>
 <head>
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+<meta charset="UTF-8">
+    <!-- CSS (load bootstrap) -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style>
+        .navbar { border-radius:0; }
+    </style>
+
+    <!-- JS (load angular, ui-router, and our custom js file) -->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    <script src="app.js"></script>
+    <style>
+	    .MAL {
+
+	    }
+    </style>
 </head>
-<body ng-controller='mainController'>
-	<header>
-		<h1>Angular Routing</h1>
-		<nav>
-			<ul>
-				<li><a href="#">Inicio</a></li>
-				<li><a href="#acerca">Acerca de</a></li>
-				<li><a href="#contacto">Contacto</a></li>
-			</ul>
-		</nav>
-	</header>
 
-	<div id="main">
-	<!-- Aquí inyectamos las vistas -->
-		<div ng-view></div>
-	</div>
+<!-- apply our angular app to our site -->
+<body ng-app="routerApp">
 
-	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
- 	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>-->
-  	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.7/angular.min.js"></script>
-  	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.3/angular-route.js"></script>
-  	<script src="main.js"></script>
+<!-- NAVIGATION -->
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <a class="navbar-brand" ui-sref="#">FutApp</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a ui-sref="home">Home</a></li>
+        <li><a ui-sref="about">About</a></li>
+      	<li><a ui-sref="sign">Sign Up</a></li>
+    </ul>
+
+</nav>
+
+<!-- MAIN CONTENT -->
+<!-- THIS IS WHERE WE WILL INJECT OUR CONTENT ============================== -->
+<div class="container">
+    <div ui-view></div>
+</div>
+
+<div class="text-center">
+    <p>A tutorial by <a href="http://scotch.io" target="_blank">scotch.io</a></p>
+    <p>View the tutorial: <a href="http://scotch.io/tutorials/javascript/angular-routing-using-ui-router" target="_blank">AngularJS Routing using UI-Router</a></p>
+</div>
+
 </body>
 </html>
