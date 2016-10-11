@@ -1,0 +1,135 @@
+        .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+          background-color: #A4A4A4;
+        }
+        .teamsShield
+        {
+            display: block;
+            background-image: url(../images/sprite-escudos-2017-v3.png);
+            background-size: 40px 1760px;
+            border:1px solid grey;
+            border-radius: 7px;
+        }
+        #Alaves{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -40px;
+        }
+        #Málaga{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1000px;
+        }
+        #Osasuna{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1160px;          
+        }
+        #Deportivo{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -480px;            
+        }
+        #Eibar{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -520px;           
+        }
+        #Barcelona{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -280px;           
+        }
+        #Betis{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -320px;          
+        }   
+        #Granada{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -760px;         
+        }  
+        #Villareal{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1680px;     
+        } 
+        #Sevilla{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1440px;  
+        }
+        #Espanyol{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -600px; 
+        }
+        #Gijón{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1480px;
+        }
+        #Athletic{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -160px;
+        }   
+        #Real_Sociedad{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1320px;
+        }
+        #Real_Madrid{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1280px;
+        } 
+        #Atlético{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -240px;            
+        }
+        #Celta_Vigo{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -400px;
+        }  
+        #Leganes{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -880px;
+        }   
+        #Valencia{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1600px;
+        }    
+        #Las_Palmas{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -840px;
+        }                                                    
+        .ptos
+        {
+            background-color: #022849;
+            color:white;
+        }
+        .ptos1{
+            background-color:  #428bca;
+            color: white;
+        }
+        th,td,tr{
+            text-align: center;
+        }
+        #position1,#position2,#position3,#position4
+        {
+            background-color: #31F13A;
+        }
+        #position5,#position6
+        {
+            background-color: #D2F233;
+        }
+        #position19,#position20
+        {
+            background-color: red;
+        }
