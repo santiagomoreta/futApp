@@ -4,25 +4,71 @@
 	</ul>
   </nav>
   <div>
-    <table class="table">
+    <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+      <th colspan="2">  -- </th>
+      <th colspan="6">  En casa </th>
+      <th colspan="6">  Fuera </th>
+      <th colspan="8">  Totales </th>
+      </tr>
+      <tr>
+        <th>Pos.</th>
+        <th>Equipo</th>
+        <th>P.G</th>
+        <th>P.E</th>
+        <th>P.P</th>
+        <th>G.F</th>
+        <th>G.C</th>   
+        <th class="ptos1">Ptos.</th>  
+        <th>P.G</th>
+        <th>P.E</th>
+        <th>P.P</th>
+        <th>G.F</th>
+        <th>G.C</th>   
+        <th class="ptos1">Ptos.</th>
+        <th>P.J</th>
+        <th>P.G</th>
+        <th>P.E</th>
+        <th>P.P</th>
+        <th>G.F</th>
+        <th>G.C</th>   
+        <th>G.Dif</th>
+        <th class="ptos">Ptos.</th>    
+      </tr>            
+      </tr>          
       </tr>
     </thead>
     <tbody>
       <tr ng-repeat="team in leagueTable">
-        <td>{{team.position}}</td>
+        <td id="position{{team.position}}">{{team.position}}</td>
         <td>{{team.teamName}}</td>
-        <td>{{team.points}}</td>
+        <td>{{team.home.wins}}</td>
+        <td>{{team.home.draws}}</td>
+        <td>{{team.home.losses}}</td>
+        <td>{{team.home.goals}}</td>
+        <td>{{team.home.goalsAgainst}}</td>
+        <td class="ptos1">{{(team.home.wins *3)+(team.home.draws)}}</td>
+        <td>{{team.away.wins}}</td>
+        <td>{{team.away.draws}}</td>
+        <td>{{team.away.losses}}</td>
+        <td>{{team.away.goals}}</td>
+        <td>{{team.away.goalsAgainst}}</td>
+        <td class="ptos1">{{(team.away.wins *3)+(team.away.draws)}}</td>
+        <td>{{team.playedGames}}</td>
+        <td>{{team.wins}}</td>
+        <td>{{team.draws}}</td>
+        <td>{{team.losses}}</td>
+        <td>{{team.goals}}</td>
+        <td>{{team.goalsAgainst}}</td>
+        <td>{{team.goalDifference}}</td>
+        <td class="ptos">{{team.points}}</td>
       </tr>
     </tbody>
   </table>
   </div>
 <div class="jumbotron text-center">
-    <h1>The Homey Page</h1>
+    <h1>{{titulo}}</h1>
     <p>This page demonstrates <span class="text-danger">nested</span> views.</p>
     
     <a ui-sref=".list" class="btn btn-primary">List</a>

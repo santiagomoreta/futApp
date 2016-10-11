@@ -1,3 +1,4 @@
+'use strict';
 var routerApp = angular.module('routerApp', ['ui.router']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
@@ -10,7 +11,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         .state('home', {
             url: '/home',
             templateUrl: 'pages/partial-home.html',
-            controller:'homeController'
+            controller:'futAppMainController'
         })
         
         // nested list with custom controller
@@ -48,26 +49,8 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         });
         
 });
-routerApp.controller('homeController', function($scope,$http) {
-	$scope.teamsMenu=[];
-	var URL_TEAMS="http://api.football-data.org/v1/competitions/436/teams";
-		$http.get(URL_TEAMS).
-			then(function(response){		
-				$scope.teamsMenu=response.data.teams;
-				console.log($scope.teamsMenu);
-		});
 
-	var URL_LEAGUETABLE="http://api.football-data.org/v1/competitions/436/leagueTable";	
-			$http.get(URL_LEAGUETABLE).
-			then(function(response){		
-				$scope.leagueTable=response.data.standing;
-				console.log($scope.leagueTable);
-		});	
-
-
-    
-});
-routerApp.controller('homeListController', function($scope) {
+/*routerApp.controller('homeListController', function($scope) {
 
     $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
 
@@ -99,4 +82,4 @@ routerApp.controller('signController', function($scope) {
    alert("sign in");
 
     
-});
+});*/
