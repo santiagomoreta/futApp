@@ -1,28 +1,3 @@
-/*'use strict';
-routerApp.controller('futAppMainController', function($scope,$http) {*/
-//	$scope.teamsMenu=[];
-//	var URL_TEAMS="http://api.football-data.org/v1/competitions/436/teams";
-//		$http.get(URL_TEAMS).
-//			then(function(response){		
-//				$scope.teamsMenu=response.data.teams;
-//				console.log($scope.teamsMenu);
-//		});
-//
-//	var URL_LEAGUETABLE="http://api.football-data.org/v1/competitions/436/leagueTable";	
-//			$http.get(URL_LEAGUETABLE).
-//			then(function(response){		
-//				$scope.leagueTable=response.data.standing;
-//				console.log($scope.leagueTable);
-//		});	
-
-/*futAppMainController.$inject = ['futAppMainService'];
-	function futAppMainController(AnswerService) {
-		this.theAnswer = AnswerService.getAnswer();
-	}
-
-    
-});*/
-
 'use strict';
 
 routerApp.controller('futAppMainController', ['$scope','$log','$state','$stateParams','futAppMainService',
@@ -34,9 +9,15 @@ routerApp.controller('futAppMainController', ['$scope','$log','$state','$statePa
       };
       $scope.getTeams = function() {
       	var getTeams_IN={};
+      	$scope.teamsMenuView=[];
         futAppMainService.getTeams(getTeams_IN).then(
             function(data) {
              $scope.teamsMenu=data.teams;
+             angular.forEach($scope.teamsMenu,function(datos,index)
+             {
+             		datos.shortName=datos.shortName.replace(" ","_");
+             });
+
             }, function(error) {
                 $log.debug('Failed: ' + error.code);            
                 var auxError = {};
@@ -60,5 +41,11 @@ routerApp.controller('futAppMainController', ['$scope','$log','$state','$statePa
       } ;
       $scope.getTeams();
       $scope.getLeagueTable();
+      //---------- goto team info -----------
+      $scope.goToTeamInfo=function(team_out)
+      {
+      	alert(team_out.name);
+       $state.go('team');
+      }
 
 }]);

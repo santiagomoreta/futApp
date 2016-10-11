@@ -34,52 +34,11 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
             controller:'signController'
         })
         
-        // ABOUT PAGE AND MULTIPLE NAMED VIEWS =================================
-        .state('about', {
-            url: '/about',
-            views: {
-                '': { templateUrl: 'pages/partial-about.html' },
-                'columnOne@about': { template: 'Look I am a column!' },
-                'columnTwo@about': { 
-                    templateUrl: 'pages/table-data.html',
-                    controller: 'aboutController'
-                }
-            }
-            
+        // TEAM PAGE AND MULTIPLE NAMED VIEWS =================================
+        .state('team', {
+            url: '/team',
+            templateUrl: 'pages/team.html',
+            controller: 'teamController',            
         });
         
 });
-
-/*routerApp.controller('homeListController', function($scope) {
-
-    $scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
-
-    
-});
-
-routerApp.controller('aboutController', function($scope) {
-    
-    $scope.message = 'test';
-   
-    $scope.scotches = [
-        {
-            name: 'Macallan 12',
-            price: 50
-        },
-        {
-            name: 'Chivas Regal Royal Salute',
-            price: 10000
-        },
-        {
-            name: 'Glenfiddich 1937',
-            price: 20000
-        }
-    ];
-    
-});
-routerApp.controller('signController', function($scope) {
-
-   alert("sign in");
-
-    
-});*/

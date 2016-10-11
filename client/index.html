@@ -8,13 +8,114 @@
         .navbar { border-radius:0; }
         .teamsShield
         {
-        	border:2px solid gray;
-        	border-radius: 7px;
-        	background-color: #E9E7F2;
+            display: block;
+            background-image: url(./pages/images/sprite-escudos-2017-v3.png);
+            background-size: 40px 1760px;
         }
+        #Alaves{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -40px;
+        }
+        #Málaga{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1000px;
+        }
+        #Osasuna{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1160px;          
+        }
+        #Deportivo{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -480px;            
+        }
+        #Eibar{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -520px;           
+        }
+        #Barcelona{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -280px;           
+        }
+        #Betis{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -320px;          
+        }   
+        #Granada{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -760px;         
+        }  
+        #Villareal{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1680px;     
+        } 
+        #Sevilla{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1440px;  
+        }
+        #Espanyol{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -600px; 
+        }
+        #Gijón{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1480px;
+        }
+        #Athletic{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -160px;
+        }   
+        #Real_Sociedad{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1320px;
+        }
+        #Real_Madrid{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1280px;
+        } 
+        #Atlético{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -240px;            
+        }
+        #Celta_Vigo{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -400px;
+        }  
+        #Leganes{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -880px;
+        }   
+        #Valencia{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -1600px;
+        }    
+        #Las_Palmas{
+            width: 40px;
+            height: 40px;
+            background-position: 0 -840px;
+        }                                                    
         .ptos
         {
-            background-color: #022849;
+            background-color: #0{
+                }22849;
             color:white;
         }
         .ptos1{
@@ -55,7 +156,7 @@
     </div>
     <ul class="nav navbar-nav">
         <li><a ui-sref="home">Home</a></li>
-        <li><a ui-sref="about">About</a></li>
+        <li><a ui-sref="team">Teams</a></li>
       	<li><a ui-sref="sign">Sign Up</a></li>
     </ul>
 
@@ -75,7 +176,10 @@
 <script src="futAppMainService.js"></script>
 <script src="futAppMainController.js"></script>
 <script src="futAppMainModel.js"></script>
-
+<!-- TEAMS -->
+<script src="teamService.js"></script>
+<script src="teamController.js"></script>
+<script src="teamModel.js"></script>
 
 </body>
 </html>

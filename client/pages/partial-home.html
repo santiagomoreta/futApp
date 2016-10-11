@@ -1,6 +1,6 @@
-  <nav class="navbar navbar-inverse" role="navigation">
-  	<ul class="nav navbar-nav" ng-repeat="team in teamsMenu">
-	<li><a title="team.code" href=""  class="teamsShield" id="{{team.shortName}}">{{team.shortName}}</a></li>
+  <nav class="navbar navbar-default" role="navigation">
+  	<ul class="nav navbar-nav" ng-repeat="team in teamsMenu | orderBy:'team.shortName'">
+	<li><a title="{{team.name}}" href=""  class="teamsShield" id="{{team.shortName}}" ng-click="goToTeamInfo(team)"></a></li>
 	</ul>
   </nav>
   <div>
@@ -40,7 +40,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="team in leagueTable">
+      <tr ng-repeat="team in leagueTable"  ng-click="goToTeamInfo(team)">
         <td id="position{{team.position}}">{{team.position}}</td>
         <td>{{team.teamName}}</td>
         <td>{{team.home.wins}}</td>
