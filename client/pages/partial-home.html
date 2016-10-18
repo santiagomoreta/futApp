@@ -1,6 +1,6 @@
   <nav class="navbar navbar-default" role="navigation">
-  	<ul class="nav navbar-nav" ng-repeat="team in teamsMenu | orderBy:'team.shortName'">
-	<li><a title="{{team.name}}" href=""  class="teamsShield" id="{{team.shortName}}" ng-click="goToTeamInfo(team)"></a></li>
+  	<ul class="nav navbar-nav" ng-repeat="team_ in teamsMenu | orderBy:'team_.shortName'">
+	<li><a title="{{team_.name}}" href=""  class="teamsShield" id="{{team_.shortName}}" ui-sref="team({idTeam:team_.name})"></a></li>
 	</ul>
   </nav>
   <div>

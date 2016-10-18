@@ -36,7 +36,7 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         
         // TEAM PAGE AND MULTIPLE NAMED VIEWS =================================
         .state('team', {
-            url: '/team',
+            url: '/team/:idTeam',
             templateUrl: 'pages/team.html',
             controller: 'teamController',            
         });
