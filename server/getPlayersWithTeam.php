@@ -17,6 +17,6 @@ $api = new FootballData();
 $playersWithTeam= $api->getPlayersByTeam(66);
 
 //echo $playersWithTeam;    
-echo "players: ". json_encode($playersWithTeam) . '';         
+echo  json_encode($playersWithTeam) ;
 
 ?>

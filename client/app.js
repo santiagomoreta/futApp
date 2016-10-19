@@ -10,23 +10,31 @@ routerApp.config(function($stateProvider, $urlRouterProvider) {
         // HOME STATES AND NESTED VIEWS ========================================
         .state('home', {
             url: '/home',
-            templateUrl: 'pages/partial-home.html',
+            templateUrl: 'pages/home.html',
             controller:'futAppMainController'
         })
         
-        // nested list with custom controller
-        .state('home.list', {
-            url: '/list',
-            templateUrl: 'pages/partial-home-list.html',
-            controller: 'homeListController'
+        // leagues 
+        .state('league', {
+            url: '/league',
+            templateUrl: 'pages/league.html',
+            controller: 'futAppMainController'
 
         })
-        
-        // nested list with just some random string data
-        .state('home.paragraph', {
-            url: '/paragraph',
-            template: 'I could sure use a drink right now.'
+         // players
+        .state('player', {
+            url: '/player',
+            templateUrl: 'pages/player.html',
+            controller: 'futAppMainController'
+
         })
+         // fixtures
+        .state('fixture', {
+            url: '/fixture',
+            templateUrl: 'pages/fixture.html',
+            controller: 'futAppMainController'
+
+        })       
 
         // SIGN ===
         .state('sign', {

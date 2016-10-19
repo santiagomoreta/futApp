@@ -107,12 +107,13 @@ class FootballData {
                                       stream_context_create($this->reqPrefs));
         
         return json_decode($response);
-    }    
+    } 
+    //----------------------------------------------------- me ------------   
     /**
-     * Function returns all teams matching a given keyword.
+     * Function returns all players of the Team Id
      * 
-     * @param string $keyword
-     * @return list of team objects
+     * @param id $idTeam
+     * @return list of players objects
      */    
     public function getPlayersByTeam($idTeam) {
         $resource = '/teams/'.$idTeam.'/players';
@@ -121,5 +122,30 @@ class FootballData {
         
         return json_decode($response);
     } 
-
+    /**
+     * Function returns all teams of the League Id
+     * 
+     * @param int $idLeague
+     * @return list of team objects
+     */    
+    public function getTeamsForIdLeague($idLeague) {
+        $resource = '/competitions/'.$idLeague.'/teams';        
+        $response = file_get_contents($this->baseUri . $resource, false, 
+                                      stream_context_create($this->reqPrefs));
+        
+        return json_decode($response);
+    }     
+        /**
+     * Function returns the position table  of the League Id
+     * 
+     * @param int $idLeague
+     * @return position table of teams objects
+     */    
+    public function getPositionTableForIdLeague($idLeague) {
+        $resource = '/competitions/'.$idLeague.'/leagueTable';     
+        $response = file_get_contents($this->baseUri . $resource, false, 
+                                      stream_context_create($this->reqPrefs));
+        
+        return json_decode($response);
+    }
 }

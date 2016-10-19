@@ -1,8 +1,8 @@
 'use strict';
 routerApp.factory('futAppMainModel',[ '$http', function($http) {
 	var API_TOKEN ="96eaca867de84513bd8e2555725b5478";
-	var URL_GETTEAMS = "http://api.football-data.org/v1/competitions/436/teams";
-	var URL_GETLEAGUETABLE ="http://api.football-data.org/v1/competitions/436/leagueTable";
+	var URL_GETTEAMS = "../server/getTeamsForIdLeague.php";
+	var URL_GETLEAGUETABLE ="../server/getPositionTableForIdLeague.php";
 
 	var futAppMainModel = {};
 

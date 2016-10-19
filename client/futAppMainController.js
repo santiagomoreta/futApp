@@ -8,7 +8,7 @@ routerApp.controller('futAppMainController', ['$scope','$log','$state','$statePa
       
       };
       $scope.getTeams = function() {
-      	var getTeams_IN={};
+      	var getTeams_IN=(436);
       	$scope.teamsMenuView=[];
         futAppMainService.getTeams(getTeams_IN).then(
             function(data) {
@@ -31,7 +31,7 @@ routerApp.controller('futAppMainController', ['$scope','$log','$state','$statePa
 
       $scope.getLeagueTable= function()
       {
-      	var leagueTable_IN={};
+      	var leagueTable_IN=(436);
       	futAppMainService.getLeagueTable(leagueTable_IN).then(
       		function (data){
       			$scope.leagueTable = data.standing;
