@@ -20,6 +20,18 @@ routerApp.controller('futAppMainController', ['$scope','$log','$state','$statePa
           });
       } ;
 
+      $scope.getLastFixtures= function()
+      {
+        var lastFixtures_IN={};
+        futAppMainService.getLastFixtures(lastFixtures_IN).then(
+          function (data){
+            $scope.lastfixtures = data;
+            $scope.lastfixturesLength =data.length;
+          }, function(error){
+
+          });
+      } ;
+
 
 
 // execute functions ---

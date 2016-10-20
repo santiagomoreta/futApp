@@ -161,4 +161,17 @@ class FootballData {
         
         return json_decode($response);
     }    
+    /**
+     * Function returns the fixtures 
+     * 
+     * @param id competition, matchday --(pending)
+     * @return all fixtures objects
+     */    
+    public function getLastFixtures($idCompetition) {
+        $resource = '/competitions/'.$idCompetition.'/fixtures?matchday=3';     
+        $response = file_get_contents($this->baseUri . $resource, false, 
+                                      stream_context_create($this->reqPrefs));
+        
+        return json_decode($response);
+    }      
 }
