@@ -25,7 +25,7 @@ routerApp.controller('futAppMainController', ['$scope','$log','$state','$statePa
         var lastFixtures_IN={};
         futAppMainService.getLastFixtures(lastFixtures_IN).then(
           function (data){
-            $scope.lastfixtures = data;
+            $scope.lastfixtures = data.fixtures;
             $scope.lastfixturesLength =data.length;
           }, function(error){
 
@@ -36,6 +36,7 @@ routerApp.controller('futAppMainController', ['$scope','$log','$state','$statePa
 
 // execute functions ---
 $scope.getLeagues();
+$scope.getLastFixtures();
 
 
 

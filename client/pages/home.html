@@ -103,9 +103,8 @@
 		        	<div class="panel panel-default">
 				      <div class="panel-heading">Champions League</div>
 				      <div class="panel-body">
-				      <div>
-				      	Barcelona <b>4 - 0</b> Manchester City<br>
-				      	{{Barcelona}} <b>{{}} - {{}}</b> {{Manchester_City}}
+				      <div ng-repeat="fix in lastfixtures">
+				      <div>	{{fix.homeTeamName}} <b>{{fix.result.goalsHomeTeam}} - {{fix.result.goalsAwayTeam}}</b> {{fix.awayTeamName}}</div>
 				      </div>
 				      </div>
 				    </div>

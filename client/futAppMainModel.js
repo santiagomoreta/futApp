@@ -20,7 +20,7 @@ routerApp.factory('futAppMainModel',[ '$http', function($http) {
 		return resultadoPeticion;
 	};
 	futAppMainModel.getLastFixtures= function(getLastFixtures_IN) {
-		var resultadoPeticion = $http.get(URL_GETLEAGUES, {
+		var resultadoPeticion = $http.get(URL_GETLASTFIXTURES, {
 			headers : {
 				'Content-Type' : 'application/json',
 				'X-Auth-Token': API_TOKEN
