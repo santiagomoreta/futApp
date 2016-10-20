@@ -12,8 +12,8 @@
                                     <i class="fa fa-trophy fa-5x"></i>
                                 </div>
                                 <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
-                                    <div>Torneos</div>
+                                    <div class="huge"> <span count-to="{{leaguesLength}}" value="0" duration="1"></span></div>
+                                    <div>Competiciones</div>
                                 </div>
                             </div>
                         </div>
@@ -93,3 +93,44 @@
                     </div>
                 </div>
             </div>
+
+
+		<div class="row">
+
+		    <div class="col-sm-6">
+		        <div ui-view="columnOne">
+	        	    <div class="panel panel-default">
+				      <div class="panel-heading">Competiciones</div>
+				      <div class="panel-body">
+				      	<table class="table table-bordered table-hover">
+				      		<thead>
+				      			<tr>
+				      				<th>-</th>
+					      			<th>Nombre</th>
+					      			<th>Partidos</th>
+					      			<th>Año</th>
+				      			</tr>
+				      		</thead>
+				      		<tbody>
+				      			<tr  ng-repeat="team in leagues">
+				      				<th id="{{team.league}}" class="flags"></th>
+				      				<td>{{team.caption}}</td>
+				      				<td>{{team.numberOfGames}}</td>
+				      				<td>{{team.year}}</td>
+				      			</tr>
+				      		</tbody>
+				      	</table>
+				      </div>
+				    </div>
+		        </div>
+		    </div>
+		    
+		    
+		    <div class="col-sm-6">
+		        <div ui-view="columnTwo">
+		        	columna 2
+		        </div>
+		    </div>
+
+		    
+		</div>            

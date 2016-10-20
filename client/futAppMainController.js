@@ -7,7 +7,37 @@ routerApp.controller('futAppMainController', ['$scope','$log','$state','$statePa
     
       
       };
-      $scope.getTeams = function() {
+
+      $scope.getLeagues= function()
+      {
+        var leagues_IN={};
+        futAppMainService.getLeagues(leagues_IN).then(
+          function (data){
+            $scope.leagues = data;
+            $scope.leaguesLength =data.length;
+          }, function(error){
+
+          });
+      } ;
+
+
+
+// execute functions ---
+$scope.getLeagues();
+
+
+
+
+
+
+
+
+
+
+
+
+      //------------------------- operaciones ok----------
+      /*$scope.getTeams = function() {
       	var getTeams_IN=(436);
       	$scope.teamsMenuView=[];
         futAppMainService.getTeams(getTeams_IN).then(
@@ -46,6 +76,6 @@ routerApp.controller('futAppMainController', ['$scope','$log','$state','$statePa
       {
       	alert(team_out.name);
        $state.go('team');
-      }
+      }*/
 
 }]);

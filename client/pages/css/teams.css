@@ -1,6 +1,55 @@
+        /*
+        * icon conpetitions
+        */
+        .flags
+        {
+            background-repeat-x: no-repeat;
+            background-repeat-y: no-repeat;
+            background-size:100%;
+        }
+        #EC,#CL
+        {
+            background-image: url('../images/flags/ue.png');
+        }
+        #PL,#ELC,#EL1
+        {
+            background-image: url('../images/flags/England.png');
+        }
+        #BL1,#BL2
+        {
+            background-image: url('../images/flags/Germany.png');
+        }
+        #PD,#SD
+        {
+            background-image: url('../images/flags/Spain.png');
+        }
+        #DFB
+        {
+            background-image: url('../images/flags/Poland.png');
+        }   
+        #FL1,#FL2
+        {
+            background-image: url('../images/flags/France.png');
+        } 
+        #SA
+        {
+            background-image: url('../images/flags/Italy.png');
+        }
+        #PPL
+        {
+            background-image: url('../images/flags/Portugal.png');
+        } 
+        #DED
+        {
+            background-image: url('../images/flags/Netherlands.png');
+        }                                       
+        /*
+        * table positions
+        */
         .table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
           background-color: #A4A4A4;
         }
+
         .teamsShield
         {
             display: block;
@@ -118,9 +167,9 @@
             background-color:  #428bca;
             color: white;
         }
-        th,td,tr{
+        /*th,td,tr{
             text-align: center;
-        }
+        }*/
         #position1,#position2,#position3,#position4
         {
             background-color: #31F13A;

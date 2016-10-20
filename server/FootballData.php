@@ -148,4 +148,17 @@ class FootballData {
         
         return json_decode($response);
     }
+    /**
+     * Function returns the all leagues
+     * 
+     * @param none
+     * @return all leagues objects
+     */    
+    public function getLeagues() {
+        $resource = '/competitions/';     
+        $response = file_get_contents($this->baseUri . $resource, false, 
+                                      stream_context_create($this->reqPrefs));
+        
+        return json_decode($response);
+    }    
 }

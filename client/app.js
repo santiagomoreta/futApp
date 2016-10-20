@@ -1,5 +1,5 @@
 'use strict';
-var routerApp = angular.module('routerApp', ['ui.router']);
+var routerApp = angular.module('routerApp', ['ui.router','countTo']);
 
 routerApp.config(function($stateProvider, $urlRouterProvider) {
     
