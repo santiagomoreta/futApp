@@ -4,7 +4,7 @@
 //include "$_SERVER[DOCUMENT_ROOT]/config.php";
 include './models/Soccerseason.php';
 include './models/Team.php';
-
+include './xml2json.php';
 /**
  * This service class encapsulates football-data.org's RESTful API.
  *
@@ -13,6 +13,11 @@ include './models/Team.php';
  * 
  */
 class FootballData {
+
+
+    //----------------------------------------
+
+    //------------------------------------
     
     public $config;
     public $baseUri;
@@ -173,5 +178,22 @@ class FootballData {
                                       stream_context_create($this->reqPrefs));
         
         return json_decode($response);
-    }      
+    }    
+        /**
+     * Function test
+     * 
+     * @param test
+     * @return test
+     */    
+    public function test() {
+       // $resource = "http://www.esmadrid.com/opendata/agenda_v1_es.xml";
+        $resource ="http://datos.madrid.es/egob/catalogo/212808-0-espacio-deporte.xml";
+        //$xml  = simplexml_load_file($resource);
+        $response = xmlToArray($resource);
+        //$response=json_encode($xml);
+        return json_decode($response);
+    }     
+
+    //-------------------------------------------------------------------------
+            
 }

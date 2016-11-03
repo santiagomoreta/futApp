@@ -101,11 +101,19 @@
         	 <div class="col-sm-4">
 		        <div ui-view="columnTwo">
 		        	<div class="panel panel-default">
-				      <div class="panel-heading">Champions League</div>
-				      <div class="panel-body">
-				      <div ng-repeat="fix in lastfixtures">
-				      <div>	{{fix.homeTeamName}} <b>{{fix.result.goalsHomeTeam}} - {{fix.result.goalsAwayTeam}}</b> {{fix.awayTeamName}}</div>
+		        	
+				      <div class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#collapseMod">
+				      	<a href="#" >
+				      		Champions League <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+				        </a>	
 				      </div>
+				   
+				      <div id="collapseMod" class="panel-collapse collapse">
+					      <div class="panel-body">
+					      <div ng-repeat="fix in lastfixtures">
+					      <div>	{{fix.homeTeamName}} <b>{{fix.result.goalsHomeTeam}} - {{fix.result.goalsAwayTeam}}</b> {{fix.awayTeamName}}</div>
+					      </div>
+					      </div>
 				      </div>
 				    </div>
 		        </div>
@@ -171,7 +179,7 @@
 
 		<div class="row">
 
-		    <div class="col-sm-6">
+		    <div class="col-sm-12">
 		        <div ui-view="columnOne">
 	        	    <div class="panel panel-default">
 				      <div class="panel-heading">Competiciones</div>
@@ -186,10 +194,10 @@
 				      			</tr>
 				      		</thead>
 				      		<tbody>
-				      			<tr  ng-repeat="team in leagues">
+				      			<tr  ng-repeat="team in test">
 				      				<th id="{{team.league}}" class="flags"></th>
-				      				<td>{{team.caption}}</td>
-				      				<td>{{team.numberOfGames}}</td>
+				      				<td>{{team.atributos.atributo[1]}}</td>
+				      				<td>{{team.atributos.atributo[5].atributo[1]  }} - {{team.atributos.atributo[5].atributo[0]}}</td>
 				      				<td>{{team.year}}</td>
 				      			</tr>
 				      		</tbody>

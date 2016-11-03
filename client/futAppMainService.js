@@ -28,7 +28,17 @@ routerApp.factory('futAppMainService', ['$q', 'futAppMainModel',
 
         }
 
+       futAppMainService.test= function(getLastFixtures_IN)
+        {
+          var deferred = $q.defer();
+          futAppMainModel.test(getLastFixtures_IN).success(function(data,status) {
+            deferred.resolve(data);
+           }).error(function(data, status) {
+           deferred.reject(crearObjetoError(data, status));
+           });
+        return deferred.promise;
 
+        }
 
 
 

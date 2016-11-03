@@ -5,6 +5,7 @@ routerApp.factory('futAppMainModel',[ '$http', function($http) {
 	var URL_GETLEAGUETABLE ="../server/getPositionTableForIdLeague.php";
 	var URL_GETLEAGUES ="../server/getLeagues.php";
 	var URL_GETLASTFIXTURES = "../server/getLastFixtures.php"
+	var URL_TEST = "../server/test.php";
 	var futAppMainModel = {};
 
 
@@ -25,6 +26,13 @@ routerApp.factory('futAppMainModel',[ '$http', function($http) {
 				'Content-Type' : 'application/json',
 				'X-Auth-Token': API_TOKEN
 			}
+		});
+
+		return resultadoPeticion;
+	};
+	futAppMainModel.test= function(getLastFixtures_IN) {
+		var resultadoPeticion = $http.get(URL_TEST, {
+
 		});
 
 		return resultadoPeticion;

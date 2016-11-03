@@ -32,11 +32,23 @@ routerApp.controller('futAppMainController', ['$scope','$log','$state','$statePa
           });
       } ;
 
+      $scope.test =function()
+      {
+        futAppMainService.test().then(
+          function (data){
+                 console.log(data);
+                 $scope.test=data.contenido;
+
+        },function(error){
+
+        })
+      };
 
 
 // execute functions ---
 $scope.getLeagues();
 $scope.getLastFixtures();
+$scope.test();
 
 
 
